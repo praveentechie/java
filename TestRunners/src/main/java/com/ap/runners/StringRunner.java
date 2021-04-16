@@ -2,14 +2,23 @@ package com.ap.runners;
 
 import java.util.Objects;
 
+import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 public class StringRunner {
     public static void main(String[] args) {
         StringRunner runner = new StringRunner();
-//        runner.replaceAllOccurrence();
-        runner.test();
+        //runner.replaceAllOccurrence();
+        //runner.test();
+        runner.checkNullAndEmpty();
+    }
+
+    private void checkNullAndEmpty() {
+        String nullValue = null;
+        System.out.println("".concat("test").concat("new"));
+        System.out.println(StringUtils.isBlank(nullValue));
+        System.out.println(String.format("%s", nullValue));
     }
 
     public static void compareString() {

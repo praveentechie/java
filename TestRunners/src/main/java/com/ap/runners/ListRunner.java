@@ -1,7 +1,9 @@
 package com.ap.runners;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import com.ap.runners.shared.BookInfo;
@@ -9,7 +11,8 @@ import com.ap.runners.shared.BookInfo;
 public class ListRunner {
     public static void main(String[] args) {
         ListRunner listRunner = new ListRunner();
-        listRunner.checkContainsObject();
+        //listRunner.checkContainsObject();
+        listRunner.constructFromSingleton();
     }
 
     private void checkContainsObject() {
@@ -21,5 +24,16 @@ public class ListRunner {
 
         List<BookInfo> bookList = Arrays.asList(info1, info2, info3);
         System.out.println(bookList.contains(info4));
+    }
+
+    /**
+     * ### List -> singleton: Pushing entry to singleton list will throw java.lang.UnsupportedOperationException
+     */
+    private void constructFromSingleton() {
+        List<String> singletonList = Collections.singletonList("one");
+        List<String> multiSizedList = new ArrayList<>(singletonList);
+        multiSizedList.add("two");
+        System.out.println(multiSizedList);
+        singletonList.add("two");
     }
 }
