@@ -1,11 +1,13 @@
-package com.ap.runners;
+package com.ap.runners.collection;
 
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 import com.ap.runners.shared.BookInfo;
@@ -18,11 +20,14 @@ public class SetRunner {
         setRunner.compareDateWithSet();
         //setRunner.compareTwoSets();
         //setRunner.uniqueObjectSet();
-        LocalDate date = LocalDate.now();
-        LocalDate date1 = LocalDate.now().plusDays(1);
-        List<LocalDate> dates = Arrays.asList(date1, date);
-        Collections.sort(dates);
-        System.out.println(date.compareTo(date1) + " " + dates);
+//        LocalDate date = LocalDate.now();
+//        LocalDate date1 = LocalDate.now().plusDays(1);
+//        List<LocalDate> dates = Arrays.asList(date1, date);
+//        Collections.sort(dates);
+//        System.out.println(date.compareTo(date1) + " " + dates);
+//        setRunner.emptyKeySet();
+
+        setRunner.treeSetProperties();
     }
 
     /** will object be validated for unique by Set as it does for primitives */
@@ -102,5 +107,23 @@ public class SetRunner {
         System.out.println("tree set " + new TreeSet<>(bookInfoSet));
         System.out.println("The object should implement Comparator<T> for tree set to work");
         System.out.println("*****************************************************");
+    }
+
+    private void emptyKeySet() {
+        System.out.println(new TreeMap<>().keySet().contains(""));
+    }
+
+    // java.util.TreeSet properties and attributes
+    private void treeSetProperties() {
+        TreeSet<String> treeSet = new TreeSet<>();
+        treeSet.add("Praveen");
+        treeSet.add("AP");
+        treeSet.add("Java");
+
+        System.out.println("Tree set order " + treeSet);
+        System.out.println("Tree set reverse order " + treeSet.descendingSet());
+        System.out.println("First element " + treeSet.first() + " and last element " + treeSet.last());
+        System.out.println("Entry greater than give String `Javascript` " + treeSet.ceiling("Javascript"));
+        System.out.println("Entry lesser than give String `Javascript` " + treeSet.floor("Javascript"));
     }
 }

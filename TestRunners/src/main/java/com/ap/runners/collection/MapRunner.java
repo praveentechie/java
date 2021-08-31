@@ -1,6 +1,5 @@
-package com.ap.runners;
+package com.ap.runners.collection;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;

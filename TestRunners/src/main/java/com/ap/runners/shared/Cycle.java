@@ -1,6 +1,8 @@
 package com.ap.runners.shared;
 
-public class Cycle extends Vehicle {
+import java.io.Serializable;
+
+public class Cycle extends Vehicle<String> implements Serializable {
     private String modal;
 
     public Cycle() {

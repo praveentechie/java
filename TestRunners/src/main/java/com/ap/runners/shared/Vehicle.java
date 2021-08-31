@@ -1,8 +1,9 @@
 package com.ap.runners.shared;
 
-public class Vehicle {
+public class Vehicle<T> {
     private int wheels;
     private int capacity;
+    private T gen;
 
     public Vehicle() {}
 

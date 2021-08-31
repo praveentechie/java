@@ -1,4 +1,4 @@
-package com.ap.runners;
+package com.ap.runners.collection;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
