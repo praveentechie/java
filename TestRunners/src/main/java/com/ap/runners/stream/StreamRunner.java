@@ -1,4 +1,4 @@
-package com.ap.runners;
+package com.ap.runners.stream;
 
 import static com.ap.runners.shared.DataProvider.getStringByStringMap;
 

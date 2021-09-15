@@ -1,9 +1,8 @@
-package com.ap.runners;
+package com.ap.runners.joda;
 
 import static com.ap.runners._common.ExceptionUtils.expectException;
 
 import org.joda.time.DateTime;
-import org.joda.time.DateTimeZone;
 import org.joda.time.LocalDate;
 
 public class JodaDateRunner {
